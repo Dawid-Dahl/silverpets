@@ -29,7 +29,7 @@
 			"web.config"
 		],
 		"expose": [
-			"themes/my-theme"
+			"themes/my-theme/dist"
 		]
 	},
 	"config": {
