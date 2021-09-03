@@ -1,6 +1,6 @@
 .hero {
   min-height: 60vh;
-  background: url("public/_resources/themes/my-theme/src/images/pet-logo_white.png");
+  background: url("../images/hero-image.jpeg");
 }
 @media only screen and (min-width: 768px) {
   .hero {

@@ -29,7 +29,8 @@
 			"web.config"
 		],
 		"expose": [
-			"themes/my-theme/dist"
+			"themes/my-theme/dist",
+			"themes/my-theme/images"
 		]
 	},
 	"config": {
