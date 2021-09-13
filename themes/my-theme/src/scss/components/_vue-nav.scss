@@ -26,13 +26,13 @@
 
 	//mobile-nav
 
-	&__menu-hamburger--active {
-		display: flex;
+	&__menu-hamburger {
 		cursor: pointer;
-	}
+		display: flex;
 
-	&__menu-hamburger--inactive {
-		display: none;
+		@media only screen and (min-width: $md) {
+			display: none;
+		}
 	}
 
 	//laptop-nav
@@ -43,14 +43,14 @@
 		@include flexCenter();
 	}
 
-	&__menu-list--active {
-		@include flexCenter();
-		height: 100%;
-		margin: 0;
-	}
-
-	&__menu-list--inactive {
+	&__menu-list {
 		display: none;
+
+		@media only screen and (min-width: $md) {
+			@include flexCenter();
+			height: 100%;
+			margin: 0;
+		}
 	}
 
 	&__menu-item {

@@ -10,6 +10,14 @@ const VueNav = new Vue({
 			windowHeight: null,
 		};
 	},
+	computed: {
+		activeNavStyles() {
+			return `
+				display: ${this.isNavMenuActive && this.windowHeight <= 768 ? "flex" : "none"};
+				flex-direction: ${this.isNavMenuActive && this.windowHeight <= 768 ? "column" : "row"};
+			`;
+		},
+	},
 	methods: {
 		handleWindowResize() {
 			viewportWidthDetector.setViewportWidth(window.innerWidth);
