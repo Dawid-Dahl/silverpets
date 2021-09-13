@@ -1,9 +1,235 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap);
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   min-height: 60vh;
   background: url("../images/hero-image.jpeg");
+  background-size: cover;
+  background-position: right;
 }
 @media only screen and (min-width: 768px) {
   .hero {
     min-height: 100vh;
   }
+}
+
+.hero__content-wrapper {
+  max-width: 40rem;
+  margin: 0 5% 0 10%;
+}
+@media only screen and (min-width: 768px) {
+  .hero__content-wrapper {
+    margin: 0 5% 0 15%;
+  }
+}
+
+.hero__slogan {
+  color: #eeeeee;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.hero__info {
+  color: #eeeeee;
+  opacity: 0.7;
+  margin: 2rem 0;
+}
+
+.hero__disclaimer {
+  color: #eeeeee;
+  opacity: 0.7;
+  margin: 1rem 0;
+}
+
+.hero__button-wrapper {
+  color: white;
+}
+.hero__button-wrapper span,
+.hero__button-wrapper i {
+  color: white;
+}
+.hero__button-wrapper button {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all;
+}
+.hero__button-wrapper button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+.hero__button-wrapper span {
+  margin: 0 2rem;
+}
+.hero__button-wrapper .fa-gift {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.hero__button-wrapper .fa-gift:hover {
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.my-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #333333;
+  color: #eeeeee;
+  height: 6.3rem;
+}
+.my-nav__logo-wrapper {
+  margin-left: 5%;
+  height: 100%;
+}
+.my-nav__logo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  .my-nav {
+    position: absolute;
+    background-color: transparent;
+  }
+}
+.my-nav__menu-hamburger--active {
+  display: flex;
+  cursor: pointer;
+}
+.my-nav__menu-hamburger--inactive {
+  display: none;
+}
+.my-nav__menu-wrapper {
+  margin-right: 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.my-nav__menu-list--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  margin: 0;
+}
+.my-nav__menu-list--inactive {
+  display: none;
+}
+.my-nav__menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  padding: 0 1rem;
+  font-weight: 500;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.5s background-color;
+}
+.my-nav__menu-item:last-child {
+  background-color: #1abc9c;
+}
+.my-nav__menu-item:last-child:hover {
+  background-color: #1acaa7;
+}
+.my-nav__menu-item:hover {
+  background-color: rgba(51, 51, 51, 0.325);
+}
+
+/* @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.my-nav {
+	@include flexCenter(row, space-between);
+	width: 100%;
+	background-color: $font-color-grey;
+	color: $font-color-white;
+	height: 6.3rem;
+
+	&__logo-wrapper {
+		margin-left: 5%;
+		height: 100%;
+	}
+
+	&__logo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (min-width: $md) {
+		position: absolute;
+		background-color: transparent;
+	}
+
+	//mobile-nav
+
+	&__menu-hamburger--active {
+		display: flex;
+		cursor: pointer;
+	}
+
+	&__menu-hamburger--inactive {
+		display: none;
+	}
+
+	//laptop-nav
+
+	&__menu-wrapper {
+		margin-right: 5%;
+		height: 100%;
+		@include flexCenter();
+	}
+
+	&__menu-list--active {
+		@include flexCenter();
+		height: 100%;
+		margin: 0;
+	}
+
+	&__menu-list--inactive {
+		display: none;
+	}
+
+	&__menu-item {
+		@include flexCenter();
+		list-style: none;
+		padding: 0 1rem;
+		font-weight: 500;
+		height: 100%;
+		cursor: pointer;
+		transition: 0.5s background-color;
+	}
+
+	&__menu-item:last-child {
+		background-color: $font-color-main;
+	}
+
+	&__menu-item:last-child:hover {
+		background-color: $font-color-main-pronounced;
+	}
+
+	&__menu-item:hover {
+		background-color: $font-color-grey-light;
+	}
+}
+ */
+body {
+  font-family: "Quicksand", sans-serif;
 }

@@ -1,3 +1,3 @@
-<% include Footer %>
+<% include VueNav %>
 <% include Hero %>
 

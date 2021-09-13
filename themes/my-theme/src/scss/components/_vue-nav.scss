@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.my-nav {
+	@include flexCenter(row, space-between);
+	width: 100%;
+	background-color: $font-color-grey;
+	color: $font-color-white;
+	height: 6.3rem;
+
+	&__logo-wrapper {
+		margin-left: 5%;
+		height: 100%;
+	}
+
+	&__logo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (min-width: $md) {
+		position: absolute;
+		background-color: transparent;
+	}
+
+	//mobile-nav
+
+	&__menu-hamburger--active {
+		display: flex;
+		cursor: pointer;
+	}
+
+	&__menu-hamburger--inactive {
+		display: none;
+	}
+
+	//laptop-nav
+
+	&__menu-wrapper {
+		margin-right: 5%;
+		height: 100%;
+		@include flexCenter();
+	}
+
+	&__menu-list--active {
+		@include flexCenter();
+		height: 100%;
+		margin: 0;
+	}
+
+	&__menu-list--inactive {
+		display: none;
+	}
+
+	&__menu-item {
+		@include flexCenter();
+		list-style: none;
+		padding: 0 1rem;
+		font-weight: 500;
+		height: 100%;
+		cursor: pointer;
+		transition: 0.5s background-color;
+	}
+
+	&__menu-item:last-child {
+		background-color: $font-color-main;
+	}
+
+	&__menu-item:last-child:hover {
+		background-color: $font-color-main-pronounced;
+	}
+
+	&__menu-item:hover {
+		background-color: $font-color-grey-light;
+	}
+}
