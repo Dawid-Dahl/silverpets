@@ -10,11 +10,27 @@ const VueNav = new Vue({
 			windowHeight: null,
 		};
 	},
+	watch: {
+		windowHeight: function () {
+			this.windowHeight >= 768 && (this.isNavMenuActive = false);
+		},
+	},
 	computed: {
-		activeNavStyles() {
+		activeNavMenuStyles() {
 			return `
-				display: ${this.isNavMenuActive && this.windowHeight <= 768 ? "flex" : "none"};
-				flex-direction: ${this.isNavMenuActive && this.windowHeight <= 768 ? "column" : "row"};
+				max-height: ${this.isNavMenuActive && this.windowHeight <= 768 ? "300px" : "0px"};
+			`;
+		},
+		activeHamburgerIconStyles() {
+			return `
+				opacity: ${this.isNavMenuActive && this.windowHeight <= 768 ? "0" : "1"};
+				transform: ${this.isNavMenuActive && this.windowHeight <= 768 ? "rotate(90deg)" : "rotate(0deg)"};
+			`;
+		},
+		activeTimesIconStyles() {
+			return `
+				opacity: ${this.isNavMenuActive && this.windowHeight <= 768 ? "1" : "0"};
+				transform: ${this.isNavMenuActive && this.windowHeight <= 768 ? "rotate(90deg)" : "rotate(0deg)"};
 			`;
 		},
 	},
