@@ -49,6 +49,12 @@
 .hero__button-wrapper i {
   color: white;
 }
+@media only screen and (max-width: 480px) {
+  .hero__button-wrapper span,
+.hero__button-wrapper i {
+    margin: 0.5rem 0;
+  }
+}
 .hero__button-wrapper button {
   background-color: #1abc9c;
   border-color: #1abc9c;
@@ -112,6 +118,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  height: 100%;
+  padding-right: 5%;
 }
 .my-nav__hamburger-icon-wrapper {
   cursor: pointer;
@@ -146,6 +154,8 @@
   height: 100%;
   cursor: pointer;
   transition: 0.5s background-color;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .my-nav__menu-item:last-child {
   background-color: #1abc9c;

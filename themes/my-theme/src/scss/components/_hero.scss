@@ -47,6 +47,10 @@
 	span,
 	i {
 		color: white;
+
+		@media only screen and (max-width: $xs) {
+			margin: 0.5rem 0;
+		}
 	}
 
 	button {
