@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+.card-img-top {
+	width: 100%;
+	height: 15rem;
+	object-fit: cover;
+}
+
+.card-text {
+	font-size: 14px;
+	color: $font-color-grey;
+}
+
+.button-link {
+	font-size: 13px;
+	color: $font-color-main;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.button-link:hover {
+	color: $font-color-main-pronounced;
+	text-decoration: none;
+}
