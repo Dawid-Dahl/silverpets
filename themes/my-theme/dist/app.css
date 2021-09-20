@@ -259,13 +259,14 @@
 }
 
 .parallax-component__background {
-  transform: translateY(-16px);
+  transform: translateY(0px);
   background-image: url("../images/section-bg.jpeg");
   background-position: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: absolute;
   z-index: -1;
+  transform: all 1s;
 }
 
 .parallax-component__content {
