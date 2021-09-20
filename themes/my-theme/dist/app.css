@@ -93,10 +93,12 @@
   background-color: #333333;
   color: #eeeeee;
   height: 6.3rem;
+  transition: all 0.3s;
+  z-index: 10;
 }
 @media only screen and (min-width: 768px) {
   .my-nav__wrapper {
-    position: absolute;
+    position: fixed;
     background-color: transparent;
   }
 }
@@ -159,6 +161,7 @@
 }
 .my-nav__menu-item:last-child {
   background-color: #1abc9c;
+  color: white !important;
 }
 .my-nav__menu-item:last-child:hover {
   background-color: #1acaa7;
@@ -242,4 +245,5 @@
 
 body {
   font-family: "Quicksand", sans-serif;
+  background-color: #f8f9fa;
 }
