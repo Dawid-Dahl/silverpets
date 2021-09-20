@@ -250,11 +250,32 @@
   text-decoration: none;
 }
 
-/* .parallax-component {
-	&__button-wrapper {
-		margin: 1rem;
-	}
-} */
+.parallax-component {
+  height: 26rem;
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.parallax-component__background {
+  transform: translateY(-16px);
+  background-image: url("../images/section-bg.jpeg");
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.parallax-component__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
 .action-button {
   font-weight: 600;
   font-size: 1rem;

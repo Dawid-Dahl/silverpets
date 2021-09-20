@@ -1,5 +1,5 @@
 import ViewportWidthDetector from "./ViewportWidthDetector";
-import navIntersectionObserver from "./nav-intersection-observer";
+import navIntersectionObserver from "./navIntersectionObserver";
 
 const viewportWidthDetector = new ViewportWidthDetector(window.innerWidth);
 

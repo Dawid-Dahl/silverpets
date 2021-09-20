@@ -1,6 +1,6 @@
 <section class="jumbotron mt-3 pb-1 text-center bg-light m-0">
     <div class="container">
-        <h1 class="jumbotron__title">What we Do</h1>
+        <h1 class="jumbotron__title">What We Do</h1>
         <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!
         </p>
     </div>
