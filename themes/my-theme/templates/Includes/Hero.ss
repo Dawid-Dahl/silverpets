@@ -5,7 +5,7 @@
             duis unde provident suspendisse orci? Recusandae! Proident,
             quos do mi cupidatat.</p>
         <div class="hero__button-wrapper">
-            <button type="button" class="btn btn-primary">ADOPT A DOG NOW</button>
+            <% include ActionButton Modifier="primary", Title="ADOPT A DOG NOW" %>
             <span>+</span>
             <i class="fa fa-gift" aria-hidden="true"></i>
         </div>

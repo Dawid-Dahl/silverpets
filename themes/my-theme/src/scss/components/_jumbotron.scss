@@ -1,8 +1,22 @@
 @use "../abstracts/variables" as *;
 
+.card {
+	box-shadow: $box-shadow;
+	transition: all 0.2s;
+}
+
+.card:hover {
+	transform: scale(1.08);
+	box-shadow: $box-shadow-big;
+
+	@media only screen and (max-width: $sm) {
+		transform: scale(1.03);
+	}
+}
+
 .card-img-top {
 	width: 100%;
-	height: 15rem;
+	height: 12rem;
 	object-fit: cover;
 }
 

@@ -29,6 +29,12 @@
   font-weight: 400;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
+@media only screen and (max-width: 576px) {
+  .hero__slogan {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+}
 
 .hero__info {
   color: #eeeeee;
@@ -54,20 +60,6 @@
 .hero__button-wrapper i {
     margin: 0.5rem 0;
   }
-}
-.hero__button-wrapper button {
-  background-color: #1abc9c;
-  border-color: #1abc9c;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 2rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  transition: 0.3s all;
-}
-.hero__button-wrapper button:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-color: transparent;
-  transform: scale(1.1);
 }
 .hero__button-wrapper span {
   margin: 0 2rem;
@@ -156,8 +148,8 @@
   height: 100%;
   cursor: pointer;
   transition: 0.5s background-color;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .my-nav__menu-item:last-child {
   background-color: #1abc9c;
@@ -206,22 +198,37 @@
 .my-nav__hamburger-icon {
   transform: rotate(0deg);
   transition: opacity, transform 0.5s;
-  top: 4%;
+  top: 5%;
   right: 10%;
   position: absolute;
 }
 .my-nav__times-icon {
   transform: rotate(0deg);
   transition: opacity, transform 0.5s;
-  top: 4%;
+  top: 5%;
   right: 10%;
   position: absolute;
   font-size: 20px;
 }
 
+.card {
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+}
+@media only screen and (max-width: 576px) {
+  .card:hover {
+    transform: scale(1.03);
+  }
+}
+
 .card-img-top {
   width: 100%;
-  height: 15rem;
+  height: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -241,6 +248,54 @@
 .button-link:hover {
   color: #1acaa7;
   text-decoration: none;
+}
+
+/* .parallax-component {
+	&__button-wrapper {
+		margin: 1rem;
+	}
+} */
+.action-button {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all;
+  border: none;
+}
+
+.action-button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+.action-button--primary {
+  background-color: #1abc9c;
+  color: white;
+  border-color: #1abc9c;
+  border-radius: 3px;
+}
+
+.action-button--primary:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+.action-button--colorless {
+  background-color: transparent;
+  color: white;
+  border: solid 2px white;
+  border-radius: 23px;
+  text-shadow: none;
+}
+
+.action-button--colorless:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+  transform: scale(1.08);
+  color: #333333;
 }
 
 body {
