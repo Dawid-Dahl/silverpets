@@ -250,6 +250,64 @@
   text-decoration: none;
 }
 
+.jumbotron-contact__card-container {
+  height: 300px;
+  margin: 5rem 0;
+}
+
+.jumbotron-contact__card-row {
+  height: 100%;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/1.jpeg");
+  margin: 1rem;
+  border-radius: 3px;
+  height: 100%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 3px 13px 2px;
+  transition: all 0.2s;
+  background-position: center;
+  background-size: cover;
+}
+.contact-card:hover {
+  transform: scale(1.08);
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 10px 1px;
+}
+.contact-card:hover .contact-card__separator {
+  opacity: 1;
+  width: 20%;
+}
+@media only screen and (max-width: 576px) {
+  .contact-card:hover {
+    transform: scale(1.03);
+  }
+}
+.contact-card__title {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.contact-card__separator {
+  opacity: 0;
+  background-color: white;
+  border-radius: 3px;
+  border: white 2.5px solid;
+  width: 0%;
+  margin: 3rem 0;
+  transition: width 0.3s, opacity 0.3s;
+}
+.contact-card__paragraph-1, .contact-card__paragraph-2 {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+
 .parallax-component {
   height: 26rem;
   border-radius: 0;

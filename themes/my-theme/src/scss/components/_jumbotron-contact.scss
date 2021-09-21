@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.jumbotron-contact__card-container {
+	height: 300px;
+	margin: 5rem 0;
+}
+
+.jumbotron-contact__card-row {
+	height: 100%;
+}
