@@ -276,6 +276,20 @@
   flex-direction: column;
   height: 100%;
 }
+.parallax-component__content p {
+  text-align: center;
+}
+.parallax-component__content h1 {
+  text-align: center;
+}
+
+.parallax-component__title {
+  text-align: center;
+}
+
+.parallax-component__title {
+  text-align: center;
+}
 
 .action-button {
   font-weight: 600;

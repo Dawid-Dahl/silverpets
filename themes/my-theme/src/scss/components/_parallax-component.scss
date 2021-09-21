@@ -22,4 +22,20 @@
 .parallax-component__content {
 	@include flexCenter(column);
 	height: 100%;
+
+	p {
+		text-align: center;
+	}
+
+	h1 {
+		text-align: center;
+	}
+}
+
+.parallax-component__title {
+	text-align: center;
+}
+
+.parallax-component__title {
+	text-align: center;
 }
