@@ -6,7 +6,7 @@
 	background-image: url("../images/1.jpeg");
 	margin: 1rem;
 	border-radius: $border-radius;
-	height: 100%;
+	min-height: 300px;
 	cursor: pointer;
 	box-shadow: $box-shadow-heavy;
 	transition: all 0.2s;

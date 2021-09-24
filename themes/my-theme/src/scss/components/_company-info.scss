@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+
+.company-info {
+	margin: 0;
+
+	& > div {
+		margin: 1rem 0;
+	}
+
+	& * {
+		margin: 0;
+	}
+}
+
+.company-info__contact {
+	> p > span {
+		font-weight: bolder;
+	}
+}
+
+.company-info__headquarters {
+	> p:first-child {
+		font-weight: bolder;
+	}
+}
+
+.company-info__slogan {
+	line-height: 1.7;
+
+	> span {
+		font-weight: 900;
+	}
+}
