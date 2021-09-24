@@ -28,6 +28,12 @@
 		list-style: none;
 		margin: 0.5rem 0;
 		font-size: 15px;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
+
+	ul > li:hover {
+		color: white;
 	}
 
 	ul > li::before {

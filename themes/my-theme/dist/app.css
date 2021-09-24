@@ -275,6 +275,11 @@
   list-style: none;
   margin: 0.5rem 0;
   font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.my-footer__blogroll ul > li:hover {
+  color: white;
 }
 .my-footer__blogroll ul > li::before {
   content: ">";
