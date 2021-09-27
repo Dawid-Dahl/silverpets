@@ -35,9 +35,9 @@ Change it, enhance it and most importantly enjoy it!
 	<script src="https://unpkg.com/vue"></script>
 
     <!-- Custom CSS -->
-    <% require css("themes/my-theme/dist/app.css") %>
+    <%-- <% require css("themes/my-theme/dist/app.css") %> --%>
     <!-- Custom JS -->
-    <% require javascript("themes/my-theme/dist/app.js") %>
+    <%-- <% require javascript("themes/my-theme/dist/app.js") %> --%>
 
 
 </head>

@@ -70,17 +70,22 @@
 		border-bottom-left-radius: $border-radius;
 		border-bottom-right-radius: $border-radius;
 
-		&:last-child {
-			background-color: $font-color-main;
-			color: white !important;
-		}
-
-		&:last-child:hover {
-			background-color: $font-color-main-pronounced;
-		}
-
 		&:hover {
 			background-color: $font-color-grey-light;
+		}
+
+		> a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	&__menu-item-adopt {
+		background-color: $font-color-main;
+		color: white !important;
+
+		&:hover {
+			background-color: $font-color-main-pronounced;
 		}
 	}
 

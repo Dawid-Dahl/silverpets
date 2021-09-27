@@ -11,19 +11,18 @@
                     <i :style="activeTimesIconStyles" class="my-nav__times-icon fas fa-times"></i>
                 </div>
                 <ul class="my-nav__menu-list">
-                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item">About us</li>
-                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item">Community</li>
-                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item">FAQ</li>
-                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item">Adopt</li>
+                    <% loop $Menu(1) %>
+                        <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item"><a class="$LinkingMode" href="$Link">$MenuTitle</a></li>
+                    <% end_loop %>
+                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item my-nav__menu-item-adopt"><a href="#">Adopt</a></li>
                 </ul>
             </div>
         </div>
         <div :style="activeNavMenuStyles" class="my-nav__dropdown-menu-wrapper">
             <ul class="my-nav__dropdown-menu-list">
-                <li class="my-nav__dropdown-menu-item">About us</li>
-                <li class="my-nav__dropdown-menu-item">Community</li>
-                <li class="my-nav__dropdown-menu-item">FAQ</li>
-                <li class="my-nav__dropdown-menu-item">Adopt</li>
+                <% loop $Menu(1) %>
+                    <li class="my-nav__dropdown-menu-item"><a href="$Link">$MenuTitle</a></li>
+                <% end_loop %>
             </ul>
         </div>
     </nav>

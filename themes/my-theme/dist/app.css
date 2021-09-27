@@ -151,15 +151,19 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.my-nav__menu-item:last-child {
+.my-nav__menu-item:hover {
+  background-color: rgba(51, 51, 51, 0.325);
+}
+.my-nav__menu-item > a {
+  color: white;
+  text-decoration: none;
+}
+.my-nav__menu-item-adopt {
   background-color: #1abc9c;
   color: white !important;
 }
-.my-nav__menu-item:last-child:hover {
+.my-nav__menu-item-adopt:hover {
   background-color: #1acaa7;
-}
-.my-nav__menu-item:hover {
-  background-color: rgba(51, 51, 51, 0.325);
 }
 .my-nav__dropdown-menu-wrapper {
   max-height: 0px;
