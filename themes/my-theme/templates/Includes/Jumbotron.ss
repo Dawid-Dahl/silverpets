@@ -6,6 +6,11 @@
     </div>
 </section>
 
+<%-- <% loop $FeaturedPets %>
+    <div>$Name</div>
+    <div>$Breed</div>
+<% end_loop %> --%>
+
 <div class="container mt-3 mb-5">
     <div class="row justify-content-center">
         <div class="col-sm-6 col-lg-3 p-0">
