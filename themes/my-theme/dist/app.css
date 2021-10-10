@@ -161,9 +161,11 @@
 .my-nav__menu-item-adopt {
   background-color: #1abc9c;
   color: white !important;
+  height: 100%;
 }
 .my-nav__menu-item-adopt:hover {
   background-color: #1acaa7;
+  text-decoration: none;
 }
 .my-nav__dropdown-menu-wrapper {
   max-height: 0px;
@@ -240,6 +242,9 @@
 .card-text {
   font-size: 14px;
   color: #333333;
+}
+.card-text > span {
+  font-weight: bold;
 }
 
 .button-link {

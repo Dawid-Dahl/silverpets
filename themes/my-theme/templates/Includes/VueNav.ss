@@ -14,7 +14,7 @@
                     <% loop $Menu(1) %>
                         <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item"><a class="$LinkingMode" href="$Link">$MenuTitle</a></li>
                     <% end_loop %>
-                    <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item my-nav__menu-item-adopt"><a href="#">Adopt</a></li>
+                    <a class="my-nav__menu-item-adopt" href="adoption"><li class="my-nav__menu-item" :style="scrolledNavMenuItemStyles">Adopt</li></a>
                 </ul>
             </div>
         </div>

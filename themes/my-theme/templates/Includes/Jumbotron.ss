@@ -6,53 +6,20 @@
     </div>
 </section>
 
-<%-- <% loop $FeaturedPets %>
-    <div>$Name</div>
-    <div>$Breed</div>
-<% end_loop %> --%>
-
 <div class="container mt-3 mb-5">
     <div class="row justify-content-center">
-        <div class="col-sm-6 col-lg-3 p-0">
-            <div class="card m-3">
-                <img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-588935825.jpg?resize=768,512" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Adopt a Dog</h5>
-                    <p class="card-text">Globally parallel task premium infomediaries</p>
-                    <a href="#" class="button-link border-0 color">Read More</a>
+        <% loop $FeaturedPets %>
+            <div class="col-sm-6 col-lg-3 p-0">
+                <div class="card m-3">
+                    <img src="$PrimaryPhoto.Link" class="card-img-top" alt="photo">
+                    <div class="card-body">
+                        <h5 class="card-title">Adopt a Dog</h5>
+                        <h2 class="card-text">$Name</h2>
+                        <p class="card-text">Globally parallel task premium infomediaries - <span>$Breed</span></p>
+                        <a href="$Link" class="button-link border-0 color">Read More</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 p-0">
-            <div class="card m-3">
-                <img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-131188311.jpg?resize=868,512" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Adopt a Dog</h5>
-                    <p class="card-text">Globally parallel task premium infomediaries</p>
-                    <a href="#" class="button-link border-0 color">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 p-0">
-            <div class="card m-3">
-                <img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-588935825.jpg?resize=768,512" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Adopt a Dog</h5>
-                    <p class="card-text">Globally parallel task premium infomediaries</p>
-                    <a href="#" class="button-link border-0 color">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 p-0">
-            <div class="card m-3">
-                <img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-131188311.jpg?resize=868,512" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Adopt a Dog</h5>
-                    <p class="card-text">Globally parallel task premium infomediaries</p>
-                    <a href="#" class="button-link border-0 color">Read More</a>
-                </div>
-            </div>
-        </div>
-        
+        <% end_loop %>
     </div>
 </div>

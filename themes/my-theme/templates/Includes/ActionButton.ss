@@ -1,1 +1,1 @@
-<button type="button" class="action-button action-button--$Modifier">$Title</button>
+<a href="$Link"><button type="button" class="action-button action-button--$Modifier">$Title</button></a>

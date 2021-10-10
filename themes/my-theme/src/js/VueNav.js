@@ -53,7 +53,7 @@ const VueNav = new Vue({
 		scrolledNavMenuItemStyles() {
 			if (this.windowWidth >= 768) {
 				return `
-					color: ${this.isAtTopOfPage && this.windowWidth >= 768 ? "white" : "var(--gray-dark)"};
+					color: ${this.isAtTopOfPage && this.windowWidth >= 768 ? "white" : "white"};
 				`;
 			}
 		},

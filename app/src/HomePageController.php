@@ -14,4 +14,11 @@ class HomePageController extends PageController
         Requirements::css("themes/my-theme/dist/app.css");
         Requirements::javascript("themes/my-theme/dist/app.js");
     }
+
+    public function FeaturedPets()
+    {
+        $pets = Pet::get()->limit(4);
+
+        return $pets;
+    }
 }

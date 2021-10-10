@@ -28,7 +28,8 @@ class Pet extends DataObject
 
     private static $has_one = [
         "Species" => Species::class,
-        "PrimaryPhoto" => Image::class
+        "PrimaryPhoto" => Image::class,
+        "AdoptionPage" => AdoptionPage::class
     ];
 
     private static $defaults = [
@@ -44,6 +45,13 @@ class Pet extends DataObject
     ];
 
     private static $versioned_gridfield_extensions = true;
+
+    public function Link($action = null)
+    {
+        $link = $this->AdoptionPage()->Link("adoption/detail/" . $this->ID);
+
+        return $link;
+    }
 
     public function getCMSFields()
     {

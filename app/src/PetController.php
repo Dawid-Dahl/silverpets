@@ -12,14 +12,4 @@ class PetController extends DataObject
     }
 
     private static $table_name = 'PetController';
-
-    public function FeaturedPets()
-    {
-        /* $pets = Pet::get()->limit(4);
-
-        dump($pets); */
-        dump("HELLO!");
-
-        /* return $pets; */
-    }
 }
