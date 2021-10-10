@@ -14,7 +14,7 @@
                     <% if $PrimaryPhoto.Link %>
                         <img src="$PrimaryPhoto.Link" class="card-img-top" alt="photo">
                     <% else %>
-                        <img src="$DefaultPetImage" class="card-img-top" alt="photo">
+                        <img src="$Up.DefaultPetImage" class="card-img-top" alt="photo">
                     <% end_if %>
                     <div class="card-body">
                         <h5 class="card-title">Adopt a Dog</h5>
