@@ -21,4 +21,9 @@ class HomePageController extends PageController
 
         return $pets;
     }
+
+    public function DefaultPetImage()
+    {
+        return "https://petdogowner.com/wp-content/uploads/2019/12/123948512_l-770x515.jpg";
+    }
 }

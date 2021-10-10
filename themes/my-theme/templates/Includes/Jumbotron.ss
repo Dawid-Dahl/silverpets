@@ -11,7 +11,11 @@
         <% loop $FeaturedPets %>
             <div class="col-sm-6 col-lg-3 p-0">
                 <div class="card m-3">
-                    <img src="$PrimaryPhoto.Link" class="card-img-top" alt="photo">
+                    <% if $PrimaryPhoto.Link %>
+                        <img src="$PrimaryPhoto.Link" class="card-img-top" alt="photo">
+                    <% else %>
+                        <img src="$DefaultPetImage" class="card-img-top" alt="photo">
+                    <% end_if %>
                     <div class="card-body">
                         <h5 class="card-title">Adopt a Dog</h5>
                         <h2 class="card-text">$Name</h2>
