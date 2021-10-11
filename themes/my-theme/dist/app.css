@@ -162,6 +162,8 @@
   background-color: #1abc9c;
   color: white !important;
   height: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .my-nav__menu-item-adopt:hover {
   background-color: #1acaa7;

@@ -14,7 +14,7 @@
                     <% loop $Menu(1) %>
                         <li :style="scrolledNavMenuItemStyles" class="my-nav__menu-item"><a class="$LinkingMode" href="$Link">$MenuTitle</a></li>
                     <% end_loop %>
-                    <a class="my-nav__menu-item-adopt" href="adoption"><li class="my-nav__menu-item" :style="scrolledNavMenuItemStyles">Adopt</li></a>
+                    <a class="my-nav__menu-item-adopt" href=$SiteConfig.CallToActionPage.Link><li class="my-nav__menu-item" :style="scrolledNavMenuItemStyles">Adopt</li></a>
                 </ul>
             </div>
         </div>

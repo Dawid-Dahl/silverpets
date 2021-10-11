@@ -84,6 +84,8 @@
 		background-color: $font-color-main;
 		color: white !important;
 		height: 100%;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
 
 		&:hover {
 			background-color: $font-color-main-pronounced;
