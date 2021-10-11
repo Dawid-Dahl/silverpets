@@ -4,8 +4,8 @@
     <% if $Images %>
         <% loop $Images %>
             <div class="gallery__image-wrapper">
-                <a href="$Image.URL" data-lightbox="gallery-{$Up.ID}" data-title="<h4>$Title</h4> $Content">
-                    <img src="$Image.Fill(576,576).URL" alt="$Image.Title" class="gallery__image">
+                <a class="gallery__image-link" href="$Image.URL" data-lightbox="gallery-{$Up.ID}" data-title="<h4>$Title</h4> $Content">
+                    <img class="gallery__image" src="$Image.Fill(576,576).URL" alt="$Image.Title">
                 </a>
             </div>
         <% end_loop %>

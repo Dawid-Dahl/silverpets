@@ -376,10 +376,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  transition: all 0.2s;
 }
 
 .gallery__wrapper > * {
   flex: 1 1 200px;
+}
+
+.gallery__image-wrapper {
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.gallery__image-wrapper:hover {
+  transform: scale(1.08);
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 10px 1px;
+}
+@media only screen and (max-width: 576px) {
+  .gallery__image-wrapper:hover {
+    transform: scale(1.03);
+  }
 }
 
 .gallery__image {

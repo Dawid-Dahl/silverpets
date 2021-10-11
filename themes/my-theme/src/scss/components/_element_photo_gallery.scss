@@ -17,10 +17,26 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+	transition: all 0.2s;
 }
 
 .gallery__wrapper > * {
 	flex: 1 1 200px;
+}
+
+.gallery__image-wrapper {
+	cursor: pointer;
+	transform: scale(1);
+	transition: all 0.2s;
+
+	&:hover {
+		transform: scale(1.08);
+		box-shadow: $box-shadow-heavy-big;
+
+		@media only screen and (max-width: $sm) {
+			transform: scale(1.03);
+		}
+	}
 }
 
 .gallery__image {
