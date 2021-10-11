@@ -25,6 +25,7 @@ class CustomSiteConfig extends DataExtension
     {
         $fields->push(TreeDropdownField::create("CallToActionPageID", "Call To Action Page Link", SiteTree::class));
         $fields->push(HTMLEditorField::create("FooterDetails", "Footer Details")->SetRows(9));
+        $fields->push(HTMLEditorField::create("FooterCallout", "Footer Callout")->SetRows(5));
         $fields->push(HTMLEditorField::create("FooterTagline", "Footer Tagline")->SetRows(5));
         $fields->push(TextField::create('CopyrightTag', "Copyright Text"),);
 
