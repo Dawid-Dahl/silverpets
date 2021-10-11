@@ -3,7 +3,7 @@
 
         <div class="row justify-content-between align-items-center col-mb-30">
             <div class="col-12 col-lg-auto text-center text-lg-left">
-                Copyrights © 2020 All Rights Are Reserved.
+                $SiteConfig.CopyrightTag
             </div>
 
             <div class="col-12 col-lg-auto text-center text-lg-right">

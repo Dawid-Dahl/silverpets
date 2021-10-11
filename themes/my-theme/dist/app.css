@@ -347,10 +347,8 @@
 }
 
 .company-info__slogan {
+  margin-top: 0 !important;
   line-height: 1.7;
-}
-.company-info__slogan > span {
-  font-weight: 900;
 }
 
 .jumbotron-contact__card-container {
