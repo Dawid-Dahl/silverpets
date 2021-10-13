@@ -9,7 +9,8 @@
 		"silverstripe-themes/simple": "~3.2.0",
 		"silverstripe/login-forms": "4.4.1@stable",
 		"dnadesign/silverstripe-elemental": "^4",
-		"dynamic/silverstripe-elemental-blocks": "^3.0"
+		"dynamic/silverstripe-elemental-blocks": "^3.0",
+		"dnadesign/silverstripe-elemental-list": "^1.2"
 	},
 	"require-dev": {
 		"sminnee/phpunit": "^5.7",

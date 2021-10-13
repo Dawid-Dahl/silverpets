@@ -328,6 +328,16 @@
   font-size: 14px;
 }
 
+.horizontal-wrapper {
+  display: flex;
+  background-color: rgba(255, 0, 0, 0.085);
+  align-items: center;
+  justify-content: center;
+}
+.horizontal-wrapper > * {
+  flex: 1;
+}
+
 .company-info {
   margin: 0;
 }
