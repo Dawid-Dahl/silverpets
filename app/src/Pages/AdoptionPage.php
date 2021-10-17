@@ -4,14 +4,11 @@ namespace SilverStripe\App;
 
 use Page;
 use DNADesign\Elemental\Models\ElementalArea;
-use GraphQL\Examples\Blog\Type\Field\HtmlField;
-use SilverStripe\Forms\GridField\GridField;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 class AdoptionPage extends Page
 {
 	private static $has_many = [
-		'Pets' => Pet::class,
+		'Pets' => Pet::class
 	];
 
 	private static $table_name = 'AdoptionPage';

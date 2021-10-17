@@ -338,6 +338,14 @@
   flex: 1;
 }
 
+.wrapper {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .company-info {
   margin: 0;
 }
