@@ -2,7 +2,9 @@
 
 namespace SilverStripe\App;
 
+use Exception;
 use PageController;
+use SilverStripe\Control\Email\Email;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\EmailField;
@@ -43,7 +45,7 @@ class AdoptionPageController extends PageController
                 HiddenField::create("PetID", "The Pet Id", $this->getRequest()->param("ID")),
             ),
             FieldList::create(FormAction::create("handleFormSubmission", "Submit Inquiry")),
-            RequiredFields::create("YourName", "Email", "YourInquiry",)
+            RequiredFields::create("YourName", "Email", "Inquiry",)
         );
 
         return $myForm;
@@ -51,17 +53,27 @@ class AdoptionPageController extends PageController
 
     public function handleFormSubmission($data, $form)
     {
-        $IsPetOwner = (isset($data["IsPetOwner"])) ? 1 : 0;
+        try {
+            $IsPetOwner = (isset($data["IsPetOwner"])) ? 1 : 0;
 
-        $petInquiry = PetInquiry::create();
-        $petInquiry->IsPetOwner = $IsPetOwner;
-        $petInquiry->PetID = $data["PetID"];
+            $petInquiry = PetInquiry::create();
+            $petInquiry->IsPetOwner = $IsPetOwner;
+            $petInquiry->PetID = $data["PetID"];
 
-        $form->saveInto($petInquiry);
+            $form->saveInto($petInquiry);
 
-        $petInquiry->write();
+            $petInquiry->write();
 
-        return $this->redirect("success-page/");
+            $session = $this->getRequest()->getSession();
+
+            $randomNumber = rand(5, 15);
+
+            $session->set("My value --- {$randomNumber}", "You are super gay -> {$randomNumber}!");
+
+            return $this->redirect("success-page/");
+        } catch (Exception $e) {
+            var_dump($e);
+        }
     }
 
     public function detail(HTTPRequest $request)
