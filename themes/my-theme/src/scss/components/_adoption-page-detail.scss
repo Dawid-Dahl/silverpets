@@ -1,7 +1,19 @@
-.wrapper {
+@use "../abstracts/variables" as *;
+
+.adpotion-page-detail__wrapper {
 	padding: 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.adpotion-page-detail__image {
+	padding: 3rem;
+	width: 600px;
+	border-radius: 65px;
+}
+
+.message {
+	background-color: red;
 }

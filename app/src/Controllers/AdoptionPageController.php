@@ -4,6 +4,15 @@ namespace SilverStripe\App;
 
 use PageController;
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\EmailField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
 
 class AdoptionPageController extends PageController
@@ -17,8 +26,43 @@ class AdoptionPageController extends PageController
     }
 
     private static $allowed_actions = [
-        "detail"
+        "detail",
+        "InquiryForm"
     ];
+
+    public function InquiryForm()
+    {
+        $myForm = Form::create(
+            $this,
+            __FUNCTION__,
+            FieldList::create(
+                TextField::create("Name", "Your Name"),
+                EmailField::create('Email', 'Your Email'),
+                TextareaField::create("Inquiry", "Inquiry"),
+                CheckboxField::create("IsPetOwner", "Already A Dog Owner?"),
+                HiddenField::create("PetID", "The Pet Id", $this->getRequest()->param("ID")),
+            ),
+            FieldList::create(FormAction::create("handleFormSubmission", "Submit Inquiry")),
+            RequiredFields::create("YourName", "Email", "YourInquiry",)
+        );
+
+        return $myForm;
+    }
+
+    public function handleFormSubmission($data, $form)
+    {
+        $IsPetOwner = (isset($data["IsPetOwner"])) ? 1 : 0;
+
+        $petInquiry = PetInquiry::create();
+        $petInquiry->IsPetOwner = $IsPetOwner;
+        $petInquiry->PetID = $data["PetID"];
+
+        $form->saveInto($petInquiry);
+
+        $petInquiry->write();
+
+        return $this->redirect("success-page/");
+    }
 
     public function detail(HTTPRequest $request)
     {
